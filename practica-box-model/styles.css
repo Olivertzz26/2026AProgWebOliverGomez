@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #f7cf62;
 }
 
 .caja {
@@ -25,9 +25,14 @@ body {
 }
 
 #caja2 {
-    /* modificaremos aquí */
+    padding: 30px;  /* Aumenta el padding */
+    background-color: lightgreen;
+
 }
 
 #caja3 {
-    /* modificaremos aquí */
+    margin: 30px;   /* Aumenta el margen */
+    background-color: lightcoral;
+    border: 5px solid red;
+
 }
