@@ -15,3 +15,9 @@ p{
     margin:15px 0;
     width: 200px;
 }
+
+/* Ejercicio 3: selector de atributo */
+
+a[target="_blank"]::after{
+    content: " 🔗";
+}
