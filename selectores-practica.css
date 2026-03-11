@@ -21,3 +21,8 @@ p{
 a[target="_blank"]::after{
     content: " 🔗";
 }
+
+/* Ejercicio 4: combinador descendiente */
+#experiencia p{
+    font-size: 0.9em;
+}
