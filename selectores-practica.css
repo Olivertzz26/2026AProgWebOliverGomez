@@ -1,4 +1,4 @@
-<style>
+
     body{
         margin:0;
         font-family: 'Segoe UI', sans-serif;
@@ -58,11 +58,11 @@
     #experiencia h2 ~ p{
         color: red;
     }
-</style>
+
 
 
 /* Ejercicio 1 */
- {
+ p{
     color: blue;
 }
 
@@ -106,4 +106,15 @@ h2 + p{
 
 #experiencia h2 ~ p.destacado{
     color: red;
+}
+
+/* Ejercicio 8: desafío final */
+
+.intro p{
+    border-left: 5px solid orange;
+    padding-left: 10px;
+}
+
+#contacto a[target="_blank"]{
+    color: green;
 }
