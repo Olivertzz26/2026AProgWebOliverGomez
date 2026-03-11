@@ -26,3 +26,9 @@ a[target="_blank"]::after{
 #experiencia p{
     font-size: 0.9em;
 }
+
+/* Ejercicio 5: combinador hijo directo */
+
+#experiencia > ul > li {
+    list-style-type: square;
+}
