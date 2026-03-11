@@ -10,8 +10,14 @@ p{
 
 /* Ejercicio 2 */
 #foto-perfil{
-    border: 3px dotted red;
+    border: 2px dotted red;
     padding:10px;
-    margin:15px 0;
+    margin:10px 0;
+}
+/* Ejercicio 2 */
+#foto-perfil{
+    border: 3px dotted red;
+    padding: 10px;
+    margin: 15px 0;
     width: 200px;
 }
