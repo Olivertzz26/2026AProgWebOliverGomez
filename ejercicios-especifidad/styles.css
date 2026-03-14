@@ -1,0 +1,55 @@
+/* Reset general recomendado */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+.ejercicio {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+  background-color: #eeeeee;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
+/* CSS del ejercicio */
+p {
+  color: black; /* 1 */
+}
+
+.texto {
+  color: blue; /* 2 */
+}
+
+#contenedor p {
+  color: green; /* 3 */
+}
+
+#parrafo {
+  color: red; /* 4 */
+}
+
+#contenedor .texto {
+  color: purple; /* 5 */
+}

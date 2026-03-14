@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de especificidad CSS - Oliver Sebastian Gomez Martinez</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Oliver Sebastian Gomez Martinez - 8° Semestre</h1>
+  <h2>Ejercicios de especificidad en CSS</h2>
+
+  <section class="ejercicio">
+    <h3>Ejercicio 1</h3>
+
+    <p><strong>HTML original del ejercicio:</strong></p>
+    <pre>
+&lt;div id="contenedor"&gt;
+    &lt;p class="texto" id="parrafo"&gt;Texto 1&lt;/p&gt;
+    &lt;p class="texto"&gt;Texto 2&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class="texto"&gt;Texto 3&lt;/p&gt;
+    </pre>
+
+    <p><strong>Elementos renderizados:</strong></p>
+
+    <div id="contenedor">
+      <p class="texto" id="parrafo">Texto 1</p>
+      <p class="texto">Texto 2</p>
+    </div>
+    <p class="texto">Texto 3</p>
+    <!--
+    Respuestas
+
+    1. ¿De qué color se ve cada párrafo?
+    Texto 1: morado
+    Texto 2: morado
+    Texto 3: azul
+
+    2. Especificidad de cada regla
+    p → (0,0,1)
+    .texto → (0,1,0)
+    #contenedor p → (1,0,1)
+    #parrafo → (1,0,0)
+    #contenedor .texto → (1,1,0)
+
+    3. ¿Por qué se aplica cada color?
+    Texto 1 y Texto 2: gana #contenedor .texto porque tiene mayor especificidad.
+    Texto 3: gana .texto porque no está dentro de #contenedor.
+
+    Elemento analizado:
+    <p class="texto" id="parrafo">
+
+    Reglas aplicadas:
+    p, .texto, #contenedor p, #parrafo, #contenedor .texto
+    -->
+
+
+  </section>
+
+</body>
+</html>
