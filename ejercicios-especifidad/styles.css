@@ -53,3 +53,23 @@ p {
 #contenedor .texto {
   color: purple; /* 5 */
 }
+
+li {
+color: gray; /* 1 */
+}
+
+.item {
+color: olive; /* 2 */
+}
+
+#primero {
+color: navy; /* 3 */
+}
+
+ul li.item {
+color: teal; /* 4 */
+}
+
+li#primero.item {
+color: fuchsia; /* 5 */
+}
