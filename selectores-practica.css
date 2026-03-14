@@ -58,29 +58,27 @@
     #experiencia h2 ~ p{
         color: red;
     }
-
+    
     .boton-practica{
-    text-align:center;
-    margin-top:20px;
-}
+        text-align:center;
+        margin-top:20px;
+    }
 
-    .boton-practica{
-    text-align:center;
-    margin-top:20px;
-}
+    .boton-practica a{
+        display:inline-block;
+        background:#ffcc00;
+        color:#0b1c3d;
+        padding:12px 25px;
+        text-decoration:none;
+        border-radius:8px;
+        font-weight:bold;
+        margin-top:10px; /* espacio entre botones */
+    }
 
-.boton-practica a{
-    background:#ffcc00;
-    color:#0b1c3d;
-    padding:10px 20px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
+    .boton-practica a:hover{
+        background:#e6b800;
+    }
 
-.boton-practica a:hover{
-    background:#e6b800;
-}
 
 
 /* Ejercicio 1 */
