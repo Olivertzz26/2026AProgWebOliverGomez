@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Practica Box Model</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Panel de Productos</h1>
+
+<div class="contenedor">
+
+    <div class="card">
+        <h2>Producto 1</h2>
+        <p>Descripción corta del producto.</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Producto 2</h2>
+        <p>Descripción corta del producto.</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Producto 3</h2>
+        <p>Descripción corta del producto.</p>
+        <button>Comprar</button>
+    </div>
+
+</div>
+
+<!--
+Respuestas
+
+1. ¿Cuántas tarjetas deberían caber en el contenedor?
+Deberían caber 3 tarjetas, porque cada tarjeta tiene width:300px y el contenedor mide 906px.
+
+2. ¿Cuántas realmente caben?
+Solo caben 2 tarjetas en la misma línea.
+
+3. ¿Por qué la tercera tarjeta se baja de línea?
+Porque el modelo de caja (Box Model) suma el ancho del contenido, el padding y el borde. Entonces cada tarjeta ocupa más de 300px, 
+por lo que tres tarjetas ya no caben dentro de los 906px del contenedor.
+-->
+
+</body>
+</html>
