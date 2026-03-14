@@ -143,3 +143,25 @@ color: darkorange; /* 4 */
 .menu li a.enlace {
 color: darkred; /* 5 */
 }
+
+/* CSS del ejercicio 6*/
+
+div {
+color: darksalmon; /* 1 */
+}
+
+.hijo {
+color: darkseagreen; /* 2 */
+}
+
+#padre .hijo {
+color: darkslateblue; /* 3 */
+}
+
+#padre > .hijo {
+color: darkslategray; /* 4 */
+}
+
+#padre .hijo .nieto {
+color: darkturquoise; /* 5 */
+}
