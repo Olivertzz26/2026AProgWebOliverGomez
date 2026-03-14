@@ -214,12 +214,34 @@
     main .seccion .especial → (0,2,1)
     -->
     </section>
-
-
-
-
-
- 
-
+    <section>
+    <h2>Ejercicio 10</h2>
+    <div class="contenedor" id="contenedor">
+    <p>Párrafo A</p>
+    <div class="interno">
+    <p class="destacado">Párrafo B</p>
+    </div>
+    <p class="destacado">Párrafo C</p>
+    </div>
+    <!--
+    Respuestas
+    1. Colores de cada párrafo
+    Párrafo A → plum
+    Párrafo B → rosybrown
+    Párrafo C → powderblue
+    2. Explica por qué "Párrafo B" no toma el color de la regla 6
+    En realidad sí toma el color de la regla 6,
+    porque cumple con #contenedor .interno .destacado
+    y esa es la regla con mayor especificidad para ese párrafo.
+    3. ¿Qué regla tiene mayor especificidad? Ordénalas de mayor a menor
+    #contenedor .interno .destacado → (1,2,0)
+    #contenedor .destacado → (1,1,0)
+    .contenedor .interno p → (0,2,1)
+    #contenedor p → (1,0,1)
+    .destacado → (0,1,0)
+    p → (0,0,1)
+    -->
+    </section>
+    
 </body>
 </html>

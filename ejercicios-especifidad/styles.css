@@ -210,7 +210,7 @@ color: mediumvioletred; /* 4 */
 color: midnightblue; /* 5 */
 }
 
-/* CSS del ejercicio 8*/
+/* CSS del ejercicio 9*/
 
 p {
 color: navy; /* 1 */
@@ -235,3 +235,30 @@ color: palegreen; /* 5 */
 main .seccion .especial {
 color: paleturquoise; /* 6 */
 }
+
+/* CSS del ejercicio 10*/
+
+p {
+color: peru; /* 1 */
+}
+
+.destacado {
+color: pink; /* 2 */
+}
+
+#contenedor p {
+color: plum; /* 3 */
+}
+
+#contenedor .destacado {
+color: powderblue; /* 4 */
+}
+
+.contenedor .interno p {
+color: rebeccapurple; /* 5 */
+}
+
+#contenedor .interno .destacado {
+color: rosybrown; /* 6 */
+}
+
