@@ -33,27 +33,29 @@ pre {
   margin: 15px 0;
 }
 
-/* CSS del ejercicio */
+/* CSS del ejercicio 1*/
 p {
-  color: black; /* 1 */
+color: black; /* 1 */
 }
 
 .texto {
-  color: blue; /* 2 */
+color: blue; /* 2 */
 }
 
 #contenedor p {
-  color: green; /* 3 */
+color: green; /* 3 */
 }
 
 #parrafo {
-  color: red; /* 4 */
+color: red; /* 4 */
 }
 
 #contenedor .texto {
-  color: purple; /* 5 */
+color: purple; /* 5 */
 }
 
+
+/* CSS del ejercicio 2*/
 li {
 color: gray; /* 1 */
 }
@@ -72,4 +74,28 @@ color: teal; /* 4 */
 
 li#primero.item {
 color: fuchsia; /* 5 */
+}
+/* CSS del ejercicio 3*/
+p {
+color: silver; /* 1 */
+}
+
+.resultado {
+color: gold; /* 2 */
+}
+
+#main p {
+color: lime; /* 3 */
+}
+
+#main .caja p {
+color: aqua; /* 4 */
+}
+
+.caja .resultado {
+color: coral; /* 5 */
+}
+
+#main .resultado {
+color: indigo; /* 6 */
 }
