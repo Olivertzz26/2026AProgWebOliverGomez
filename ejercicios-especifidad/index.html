@@ -139,6 +139,30 @@
     #padre .hijo .nieto → (1,2,0)
     -->
     </section>
+    <section>
+    <h2>Ejercicio 7</h2>
+    <form id="registro">
+    <input type="text" name="usuario" class="campo">
+    <input type="password" name="clave" class="campo">
+    <input type="submit" value="Enviar" id="btn">
+    </form>
+    <!--
+    Respuestas
+    1. ¿Qué grosor y color de borde tiene cada input?
+    Usuario → 3px solid green
+    Clave → 3px solid green
+    Enviar → 5px solid purple
+    2. Orden de especificidad de menor a mayor
+    input → (0,0,1)
+    .campo → (0,1,0)
+    input[type="submit"] → (0,1,1)
+    #registro input → (1,0,1)
+    #btn → (1,0,0)
+    3. ¿Qué pasa si se añade !important a la regla 1?
+    La regla 1 ganaría sobre las demás.
+    Todos los input tendrían borde 1px solid black.
+    -->
+    </section>
 
 
 
