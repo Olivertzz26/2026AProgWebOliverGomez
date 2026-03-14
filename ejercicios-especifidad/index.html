@@ -77,11 +77,32 @@
     gana la que aparece después en el CSS.
     -->
     </section>
+    <section>
+    <h2>Ejercicio 4</h2>
+    <article>
+    <h2 class="titulo">Título</h2>
+    <p class="contenido">Párrafo 1</p>
+    <p class="contenido" id="ultimo">Párrafo 2</p>
+    </article>
+    <!--
+    Respuestas
+    1. Colores de cada elemento
+    Título → color por defecto (no tiene regla CSS)
+    Párrafo 1 → darkcyan
+    Párrafo 2 → darkgoldenrod
+    2. ¿Qué regla se aplica al párrafo con id "ultimo"? ¿Por qué?
+    Se aplica: p#ultimo.contenido { color: darkgoldenrod; }
+    Porque tiene mayor especificidad.
+    3. Si se añade !important a la regla 2, ¿cambia algo?
+    Sí. La regla .contenido { color: chocolate !important; }
+    ganaría sobre las demás y ambos párrafos serían chocolate.
+    -->
+    </section>
 
 
 
 
-  </section>
+ 
 
 </body>
 </html>

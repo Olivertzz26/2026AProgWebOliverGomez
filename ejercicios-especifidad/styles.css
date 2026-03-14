@@ -99,3 +99,25 @@ color: coral; /* 5 */
 #main .resultado {
 color: indigo; /* 6 */
 }
+
+/* CSS del ejercicio 4*/
+
+article p {
+color: brown; /* 1 */
+}
+
+.contenido {
+color: chocolate; /* 2 */
+}
+
+#ultimo {
+color: crimson; /* 3 */
+}
+
+article .contenido {
+color: darkcyan; /* 4 */
+}
+
+p#ultimo.contenido {
+color: darkgoldenrod; /* 5 */
+}
