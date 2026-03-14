@@ -190,6 +190,30 @@
     por lo que el título de card1 se vería color orange.
     -->
     </section>
+    <section>
+    <h2>Ejercicio 9</h2>
+    <main>
+    <section class="seccion" id="s1">
+    <p>Párrafo 1</p>
+    <p class="especial">Párrafo 2</p>
+    </section>
+    <section class="seccion">
+    <p>Párrafo 3</p>
+    </section>
+    </main>
+    <!--
+    Respuestas
+    1. Colores de cada párrafo
+    Párrafo 1 → orange
+    Párrafo 2 → paleturquoise
+    Párrafo 3 → palegreen
+    2. ¿Qué regla se aplica al párrafo con clase "especial" dentro de #s1?
+    main .seccion .especial { color: paleturquoise; }
+    Porque tiene mayor especificidad que las demás.
+    3. Especificidad de la regla 6
+    main .seccion .especial → (0,2,1)
+    -->
+    </section>
 
 
 

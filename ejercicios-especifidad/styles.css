@@ -210,3 +210,28 @@ color: mediumvioletred; /* 4 */
 color: midnightblue; /* 5 */
 }
 
+/* CSS del ejercicio 8*/
+
+p {
+color: navy; /* 1 */
+}
+
+.seccion p {
+color: olive; /* 2 */
+}
+
+#s1 p {
+color: orange; /* 3 */
+}
+
+#s1 p.especial {
+color: orchid; /* 4 */
+}
+
+main .seccion p {
+color: palegreen; /* 5 */
+}
+
+main .seccion .especial {
+color: paleturquoise; /* 6 */
+}
