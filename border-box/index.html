@@ -49,20 +49,15 @@ por lo que tres tarjetas ya no caben dentro de los 906px del contenedor.
 Parte 4 — Análisis matemático
 
 Cálculo del tamaño real de .card
-
 width: 300px
 padding: 20px + 20px = 40px
 border: 10px + 10px = 20px
-
 Tamaño real de cada tarjeta:
 300 + 40 + 20 = 360px
-
 Si hay 3 tarjetas:
-360px × 3 = 1080px
-
+360p × 3 = 1080px
 Pero el contenedor mide:
 906px
-
 Conclusión:
 Las tres tarjetas no caben dentro del contenedor,
 por eso la tercera tarjeta se baja de línea y el layout se rompe.
@@ -73,23 +68,17 @@ Parte 6 — Observación nuevamente
 
 1. ¿Las 3 tarjetas caben ahora?
 Sí, ahora las 3 tarjetas caben dentro del contenedor.
-
 2. ¿Por qué?
 Porque se aplicó box-sizing: border-box, lo que hace que
 el padding y el border se incluyan dentro del width del elemento.
-
 3. ¿Qué cambió exactamente?
 Antes el width solo representaba el contenido y el padding
 y el border se sumaban al tamaño total.
-
 Con border-box:
-width = contenido + padding + border
-
+width  contenido + padding + border
 Entonces cada tarjeta sigue midiendo 300px en total.
-
 Cálculo:
 300px × 3 = 900px
-
 Como el contenedor mide 906px,
 las tres tarjetas ahora caben y el layout funciona correctamente.
 -->
@@ -102,16 +91,26 @@ Sí, se rompe.
 Porque el padding y el border se suman al width (33.33%), 
 haciendo que las tarjetas ocupen más espacio del disponible y 
 las columnas se bajen de línea.
-
 2. ¿Funciona correctamente con border-box?
 Sí, funciona correctamente.
 Porque border-box incluye el padding y el border dentro del width,
 por lo que cada tarjeta sigue ocupando solo el 33.33% del contenedor.
-
 3. ¿Por qué los frameworks CSS usan esta técnica?
 Porque hace más fácil controlar el tamaño de los elementos,
 evita que el layout se rompa y permite crear grids y columnas
 de forma más predecible y responsive.
+-->
+
+<!--
+Parte 8 — Experimento profesional (Flexbox)
+1. ¿Qué sucede con border-box?
+Con border-box el layout funciona correctamente.
+Las tarjetas mantienen su tamaño dentro del contenedor porque
+el padding y el border se incluyen dentro del width.
+2. ¿Qué sucede sin border-box?
+Sin border-box el padding y el border se suman al width,
+por lo que las tarjetas ocupan más espacio del disponible
+y el layout puede desacomodarse o bajar elementos de línea.
 -->
 
 </body>
