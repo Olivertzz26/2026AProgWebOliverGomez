@@ -113,5 +113,43 @@ por lo que las tarjetas ocupan más espacio del disponible
 y el layout puede desacomodarse o bajar elementos de línea.
 -->
 
+<!--
+Parte 9 — Experimento extremo
+
+Observaciones al manipular el padding
+
+1. Sin border-box
+El padding y el border se suman al width del elemento.
+Si el padding aumenta mucho, las tarjetas ocupan más espacio
+y el layout se rompe más fácilmente.
+Los elementos pueden bajarse de línea o desbordarse.
+
+2. Con border-box
+El padding y el border se incluyen dentro del width.
+Aunque cambie el padding, la tarjeta conserva su ancho total.
+El layout es más estable y predecible.
+
+Conclusión
+border-box ayuda a mantener el diseño ordenado,
+incluso cuando se cambian valores grandes o pequeños de padding.
+-->
+
+<!--
+Parte 10 — Conclusión
+
+border-box permite que el ancho declarado sea el tamaño real del elemento,
+porque incluye el contenido, padding y border dentro del width.
+
+Esto evita errores en los layouts y hace que el diseño sea más estable
+y predecible.
+
+Por esta razón muchos frameworks CSS lo utilizan, como:
+
+- Bootstrap
+- Tailwind
+- Normalize
+- CSS Reset modernos
+-->
+
 </body>
 </html>
