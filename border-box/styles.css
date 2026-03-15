@@ -16,13 +16,13 @@ h1{
     margin:auto;
     border:3px solid black;
     background:white;
-    display:flex;
+
 }
 
 .card{
     width: 30.33%;
-    padding:30px;
-    border:15px solid steelblue;
+    padding:50px;
+    border:25px solid red;
     float:left;
     background:#e6f2ff;
     outline:3px dashed red;
