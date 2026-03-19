@@ -33,12 +33,33 @@ header {
 
 /* 3. Botón */
 .btn {
- background: radial-gradient(circle, #00c6ff, #0072ff);
- border: none;
- padding: 10px 20px;
- color: white;
- cursor: pointer;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #36d1dc, #5b86e5);
+  background-size: 600% 600%;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  animation: moverGradiente 5s ease infinite;
+  transition: 0.4s;
 }
+
+.btn:hover {
+  background: linear-gradient(270deg, #11998e, #38ef7d, #fc4a1a, #f7b733);
+  background-size: 600% 600%;
+}
+
+@keyframes moverGradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /* 5. Texto gradiente */
 .texto-gradiente {
@@ -49,19 +70,25 @@ header {
 
 /* 6. Imagen overlay */
 .img-container {
- position: relative;
- display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .img-container img {
- display: block;
+  display: block;
 }
 
 .img-container::after {
- content: "";
- position: absolute;
- inset: 0;
- background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.img-container:hover::after {
+  opacity: 1;
 }
 
 /* 7. Lista */
