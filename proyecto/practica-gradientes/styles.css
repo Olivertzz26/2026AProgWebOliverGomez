@@ -7,14 +7,14 @@ body {
 
 /* 1. Bloques */
 header {
- background: linear-gradient(135deg, #667eea, #764ba2);
+ background: radial-gradient(circle, #ff9a9e, #fad0c4);
  color: white;
  padding: 20px;
  text-align: center;
 }
 
 .caja {
- background: linear-gradient(to right, #ff7e5f, #feb47b);
+ background: linear-gradient(45deg, #43e97b, #38f9d7);
  padding: 20px;
  margin-top: 10px;
 }
@@ -25,7 +25,7 @@ header {
 }
 .link-gradiente {
  display: inline-block;
- background: linear-gradient(to right, cyan, blue);
+ background: linear-gradient(to left, purple, pink);
  padding: 5px 10px;
  color: white;
  text-decoration: none;
@@ -33,7 +33,7 @@ header {
 
 /* 3. Botón */
 .btn {
- background: linear-gradient(to right, #ff416c, #ff4b2b);
+ background: radial-gradient(circle, #00c6ff, #0072ff);
  border: none;
  padding: 10px 20px;
  color: white;
