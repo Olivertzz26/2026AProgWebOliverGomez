@@ -14,9 +14,12 @@ header {
 }
 
 .caja {
- background: linear-gradient(45deg, #43e97b, #38f9d7);
- padding: 20px;
- margin-top: 10px;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.5), transparent 40%),
+    linear-gradient(45deg, #00c6ff, #0072ff);
+  padding: 20px;
+  margin-top: 10px;
+  color: white;
 }
 /* 2. Inline */
 .inline {
@@ -122,8 +125,27 @@ tr.highlight {
 
 /* 9. Bordes */
 .borde-gradiente {
- border: 5px solid;
- border-image: linear-gradient(45deg, red, blue) 1;
- padding: 20px;
+  border: 5px solid transparent;
+  padding: 20px;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(270deg, red, blue, purple, cyan, red) border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: moverBorde 4s linear infinite;
 }
 
+@keyframes moverBorde {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.texto-parcial {
+  background: linear-gradient(45deg, #f06, #f90);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
