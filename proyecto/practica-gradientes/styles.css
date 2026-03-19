@@ -1,3 +1,10 @@
+/* 4. Fondo general */
+body {
+ background: conic-gradient(from 90deg, red, yellow, green, blue);
+ min-height: 100vh;
+ font-family: Arial, sans-serif;
+}
+
 /* 1. Bloques */
 header {
  background: linear-gradient(135deg, #667eea, #764ba2);
