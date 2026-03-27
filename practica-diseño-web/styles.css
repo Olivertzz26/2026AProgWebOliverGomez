@@ -78,3 +78,7 @@ th {
   vertical-align: bottom;
   padding-bottom: 4px;
 }
+
+strong {
+  font-weight: bold;
+}
