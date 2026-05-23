@@ -1,0 +1,44 @@
+(async () => {
+  // 1 y 2. Le indicamos a TypeScript que estos arreglos contendrán "cualquier cosa" usando : any[]
+  const myCart: any[] = [];
+  const products: any[] = [];
+  const limit = 2;
+
+  async function getProducts() {
+    const rta = await fetch('http://api.escuelajs.co/api/v1/products', {
+      method: 'GET'
+    });
+    const data = await rta.json();
+
+    products.push(...data);
+  }
+
+  function getTotal() {
+    let total = 0;
+
+    for (let i = 0; i < products.length; i++) {
+      total += products[i].price;
+    }
+    return total;
+  }
+
+  // 3 y 4. Le decimos explícitamente que 'index' será un número usando : number
+  function addProduct(index: number) {
+    if (getTotal() <= limit) {
+      myCart.push(products[index]);
+    }
+  }
+
+  await getProducts();
+  addProduct(1);
+  addProduct(2);
+
+  const total = getTotal();
+  console.log(total);
+
+  const person = {
+    name: 'Nicolas',
+    lastName: 'Molina'
+  };
+
+})();
