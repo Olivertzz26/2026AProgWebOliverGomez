@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Jugadores</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <section class="hero">
+      <h1>Gestión de Jugadores</h1>
+      <p>Microservicio Frontend SPA conectado al Backend de Jugadores</p>
+    </section>
+
+    <section class="card">
+      <h2 id="form-title">Registrar jugador</h2>
+
+      <form id="jugador-form">
+        <input type="hidden" id="jugador-id" />
+
+        <label>Nombre del jugador</label>
+        <input type="text" id="nombre" placeholder="Ejemplo: André Pierre Gignac" required />
+
+        <label>Posición</label>
+        <input type="text" id="posicion" placeholder="Ejemplo: Delantero" required />
+
+        <label>Número</label>
+        <input type="number" id="numero" placeholder="Ejemplo: 10" required />
+
+        <label>Equipo</label>
+        <select id="equipo_id" required>
+         <option value="">Selecciona un equipo</option>
+        </select>
+
+        <div class="botones">
+          <button type="submit" id="btn-guardar">Guardar</button>
+          <button type="button" id="btn-cancelar" class="secundario">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Lista de jugadores</h2>
+      <div id="mensaje"></div>
+      <div id="jugadores-lista" class="grid"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

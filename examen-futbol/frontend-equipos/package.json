@@ -1,0 +1,14 @@
+
+{
+  "name": "frontend-equipos",
+  "version": "1.0.0",
+  "description": "Frontend SPA para equipos de futbol",
+  "scripts": {
+    "dev": "bun --hot src/main.ts",
+    "start": "bun src/main.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}

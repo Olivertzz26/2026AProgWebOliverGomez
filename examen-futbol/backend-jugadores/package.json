@@ -1,0 +1,17 @@
+{
+  "name": "backend-jugadores",
+  "version": "1.0.0",
+  "description": "Microservicio backend para jugadores de futbol",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "bun --watch src/main.ts",
+    "start": "bun src/main.ts"
+  },
+  "dependencies": {
+    "@types/pg": "latest",
+    "pg": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}

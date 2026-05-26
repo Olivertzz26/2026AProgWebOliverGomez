@@ -1,0 +1,92 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: futbol_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: futbol_user
+      POSTGRES_PASSWORD: futbol_pass
+      POSTGRES_DB: futbol_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend-equipos:
+    build: ./backend-equipos
+    container_name: backend_equipos
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: futbol_user
+      DB_PASSWORD: futbol_pass
+      DB_NAME: futbol_db
+      PORT: 3001
+    depends_on:
+      - postgres
+
+  backend-jugadores:
+    build: ./backend-jugadores
+    container_name: backend_jugadores
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: futbol_user
+      DB_PASSWORD: futbol_pass
+      DB_NAME: futbol_db
+      PORT: 3002
+    depends_on:
+      - postgres
+
+  backend-partidos:
+    build: ./backend-partidos
+    container_name: backend_partidos
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: futbol_user
+      DB_PASSWORD: futbol_pass
+      DB_NAME: futbol_db
+      PORT: 3003
+    depends_on:
+      - postgres
+
+  frontend-equipos:
+    build: ./frontend-equipos
+    container_name: frontend_equipos
+    restart: always
+    ports:
+      - "5171:5171"
+    depends_on:
+      - backend-equipos
+
+  frontend-jugadores:
+    build: ./frontend-jugadores
+    container_name: frontend_jugadores
+    restart: always
+    ports:
+      - "5172:5172"
+    depends_on:
+      - backend-jugadores
+
+  frontend-partidos:
+    build: ./frontend-partidos
+    container_name: frontend_partidos
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend-partidos
+
+volumes:
+  postgres_data:

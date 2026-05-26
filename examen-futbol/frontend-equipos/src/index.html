@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Equipos</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <section class="hero">
+      <h1>Gestión de Equipos</h1>
+      <p>Microservicio Frontend SPA conectado al Backend de Equipos</p>
+    </section>
+
+    <section class="card">
+      <h2 id="form-title">Registrar equipo</h2>
+
+      <form id="equipo-form">
+        <input type="hidden" id="equipo-id" />
+
+        <label>Nombre del equipo</label>
+        <input type="text" id="nombre" placeholder="Ejemplo: Tigres" required />
+
+        <label>Ciudad</label>
+        <input type="text" id="ciudad" placeholder="Ejemplo: Monterrey" required />
+
+        <label>Estadio</label>
+        <input type="text" id="estadio" placeholder="Ejemplo: Estadio Universitario" required />
+
+        <div class="botones">
+          <button type="submit" id="btn-guardar">Guardar</button>
+          <button type="button" id="btn-cancelar" class="secundario">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Lista de equipos</h2>
+      <div id="mensaje"></div>
+      <div id="equipos-lista" class="grid"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
