@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Gomez | Tarjeta de Presentación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --azul-oscuro: #0a0f1d;
+            --cyber-blue: #00f0ff;
+            --matrix-green: #39ff14;
+            --gris-carbon: #121826;
+            --blanco: #ffffff;
+            --gris-texto: #94a3b8;
+            --fuente-titulos: "Lexend", sans-serif;
+            --fuente-texto: "Roboto Condensed", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fuente-texto);
+            background: linear-gradient(135deg, var(--azul-oscuro) 0%, #02040a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: var(--blanco);
+        }
+
+        .card {
+            background: rgba(18, 24, 38, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 240, 255, 0.1);
+            animation: fadeIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyber-blue), var(--matrix-green));
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 25px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            background: var(--azul-oscuro);
+            border-radius: 50%;
+            border: 3px solid var(--cyber-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: var(--gris-carbon);
+            border: 2px solid var(--matrix-green);
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+        }
+
+        h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+            color: var(--blanco);
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--cyber-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-size: 1rem;
+            color: var(--gris-texto);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .interests-tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #e2e8f0;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-btn {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--blanco);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .link-btn:hover {
+            background: transparent;
+            border-color: var(--cyber-blue);
+            color: var(--cyber-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 240, 255, 0.15);
+        }
+
+        .link-btn--featured {
+            background: transparent;
+            border-color: var(--matrix-green);
+            color: var(--matrix-green);
+        }
+
+        .link-btn--featured:hover {
+            background: var(--matrix-green);
+            color: var(--azul-oscuro);
+            border-color: var(--matrix-green);
+            box-shadow: 0 8px 20px rgba(57, 255, 20, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="avatar-container">
+            <div class="avatar">⚽</div>
+            <div class="badge">🤖</div>
+        </div>
+
+        <h1>Oliver Gomez</h1>
+        <div class="subtitle">Programador de Automatizaciones IA</div>
+        
+        <p class="bio">Desarrollo soluciones inteligentes, optimización de infraestructura y automatización de procesos avanzados mediante Inteligencia Artificial.</p>
+
+        <div class="interests-tags">
+            <span class="tag">🌮 Tacos</span>
+            <span class="tag">🎬 Series</span>
+            <span class="tag">🍿 Anime</span>
+            <span class="tag">⚽ Fútbol</span>
+        </div>
+
+        <div class="links-container">
+            <a href="https://github.com/Olivertzz26/2026AProgWebOliverGomez" target="_blank" class="link-btn link-btn--featured">
+                🌐 Mi Portafolio Web
+            </a>
+            
+            <a href="https://github.com/Olivertzz26" target="_blank" class="link-btn">
+                💻 Perfil de GitHub
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

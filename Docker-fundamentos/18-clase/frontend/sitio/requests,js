@@ -1,0 +1,42 @@
+var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+};
+
+// Conectamos con el backend expuesto en el puerto 5000 de tu Vagrant
+fetch('http://localhost:5000/getMyInfo', requestOptions)
+.then(res => {
+    if (!res.ok) {
+        throw new Error("Error en la respuesta del servidor: " + res.status);
+    }
+    return res.json();
+})
+.then(json => {
+    console.log("Datos recibidos con éxito de la API:", json);
+    
+    // Inyectamos tu nombre real desde el JSON de Python
+    document.getElementById("name").textContent = json.name + " " + json.lastname;
+    document.getElementById("author").textContent = "2026 - Hecho por " + json.author;
+    
+    // Mapeamos tus enlaces reales quitando el '#' fijo
+    document.getElementById("facebookLink").href = "https://www.facebook.com/" + json.socialMedia.facebookUser;
+    document.getElementById("instagramUser").href = "https://www.instagram.com/" + json.socialMedia.instagramUser;
+    document.getElementById("xUser").href = "https://www.x.com/" + json.socialMedia.xUser;
+    document.getElementById("githubUser").href = "https://www.github.com/" + json.socialMedia.githubUser;
+    document.getElementById("linkedinUser").href = "https://www.linkedin.com/in/" + json.socialMedia.linkedin;
+    document.getElementById("website").href = json.blog;
+})
+.catch(error => {
+    console.error("Error conectando a la API Flask:", error);
+    // Si la API falla, esta función rescata la interfaz para que no se quede rota
+    document.getElementById("name").textContent = "Susana Villegas";
+    document.getElementById("author").textContent = "2026 - Susana Villegas";
+    
+    // Enlaces de respaldo manuales por si tu contenedor de Python se duerme
+    document.getElementById("facebookLink").href = "https://www.facebook.com/OliverGomez";
+    document.getElementById("instagramUser").href = "https://www.instagram.com/olivergm.26";
+    document.getElementById("xUser").href = "https://www.x.com/olivergm.26";
+    document.getElementById("githubUser").href = "https://github.com/Olivertzz26";
+    document.getElementById("linkedinUser").href = "https://www.linkedin.com/in/Oliver-Gomez";
+    document.getElementById("website").href = "https://github.com/Olivertzz26/26AProgWebOliverGomez";
+});

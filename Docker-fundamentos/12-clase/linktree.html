@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Gomez | Links</title>
+    <style>
+        :root {
+            --fondo: #0f141c;
+            --tarjeta-bg: #1a2333;
+            --lineas: #000000;
+            --accent: #00f0ff; /* Azul cian tecnológico */
+            --texto-principal: #ffffff;
+            --texto-secundario: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--fondo); 
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--texto-principal);
+            min-height: 100vh;
+        }
+
+        /* Contenedor Perfil */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 420px;
+        }
+        
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #1e293b;
+            object-fit: cover;
+            border: 3px solid var(--lineas);
+            box-shadow: 4px 4px 0px var(--lineas);
+        }
+
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--texto-principal);
+            margin: 15px 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-bio {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        /* Etiquetas de gustos */
+        .tags-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: var(--tarjeta-bg);
+            color: var(--texto-secundario);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 6px 12px;
+            border: 2px solid var(--lineas);
+            border-radius: 6px;
+            box-shadow: 2px 2px 0px var(--lineas);
+        }
+
+        /* Contenedor de los botones */
+        .links-container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 15px;
+        }
+
+        /* Diseño de los botones estilo Neo-Brutalista */
+        .link-btn {
+            background-color: var(--tarjeta-bg);
+            color: var(--texto-principal);
+            text-decoration: none;
+            padding: 16px 20px;
+            border: 3px solid var(--lineas);
+            border-radius: 8px; /* Bordes ligeramente más rectos */
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+            box-shadow: 5px 5px 0px var(--lineas);
+        }
+
+        /* Variación para el botón destacado */
+        .link-btn--featured {
+            background-color: var(--accent);
+            color: var(--lineas);
+        }
+
+        .link-btn:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0px var(--lineas);
+        }
+
+        .link-btn--featured:hover {
+            background-color: var(--texto-principal);
+            color: var(--lineas);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="assets/perfil.jpeg" alt="Oliver Gomez" class="profile-pic">
+        <h1 class="profile-name">Oliver Gomez</h1>
+        <p class="profile-bio">Programador de Automatizaciones IA</p>
+        
+    </div>
+
+    <div class="links-container">
+        <a href="https://github.com/Olivertzz26/2026AProgWebOliverGomez" target="_blank" class="link-btn link-btn--featured">
+            🚀 Repositorio de Programación Web
+        </a>
+        
+        <a href="https://github.com/Olivertzz26" target="_blank" class="link-btn">
+            💻 Mi perfil de GitHub
+        </a>
+    </div>
+
+</body>
+</html>

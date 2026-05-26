@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sus | Ecosistema Dev</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        body {
+            background-color: #0d1117; /* Fondo oscuro estilo GitHub */
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        /* Foto de Perfil estilo terminal */
+        .profile-pic {
+            border-radius: 50%;
+            border: 3px solid #238636; /* Verde Scout / Dev */
+            box-shadow: 0px 0px 15px rgba(35, 134, 54, 0.4);
+            object-fit: cover;
+        }
+
+        .name-badge {
+            display: inline-block;
+            background-color: #238636;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 15px 0 5px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            color: #58a6ff; /* Azul tecnológico */
+            letter-spacing: 2px;
+            margin: 25px 0 10px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Botones estilo Bloques de Código */
+        .link-btn {
+            background-color: #161b22;
+            color: #f0f6fc;
+            text-decoration: none;
+            padding: 16px 20px;
+            border: 2px solid #30363d;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 3px 3px 0px #30363d;
+        }
+
+        .link-btn:hover {
+            background-color: #21262d;
+            border-color: #58a6ff;
+            color: #58a6ff;
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #58a6ff;
+        }
+
+        /* Footer */
+        .bottom {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #8b949e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .bottom svg {
+            stroke: #238636;
+            fill: #238636;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado Principal -->
+        <div>
+            <img src="https://avatars.githubusercontent.com/u/144616231?v=4" alt="Oliver Gomez" width="130px" height="130px" class="profile-pic">
+            <br>
+            <span class="name-badge" id="name">Conectando a la API...</span>
+            <p class="subtitle">Sistemas Computacionales </p>
+        </div>
+
+        <!-- Bloque 1: Desarrollo -->
+        <div class="section-title">💻 Desarrollo con IA</div>
+        <div class="links-container">
+            <a id="githubUser" href="#" class="link-btn" target="_blank">
+                <i data-feather="github"></i> Mi GitHub Global
+            </a>
+            <a id="website" href="#" class="link-btn" target="_blank">
+                <i data-feather="code"></i> Repositorio Programación Web
+            </a>
+        </div>
+
+        <!-- Bloque 2: Comunidad -->
+        <div class="section-title">⚜️ Movimiento Scout</div>
+        <div class="links-container">
+            <a id="facebookLink" href="#" class="link-btn" target="_blank">
+                <i data-feather="facebook"></i> Facebook
+            </a>
+            <a id="instagramUser" href="#" class="link-btn" target="_blank">
+                <i data-feather="instagram"></i> Instagram
+            </a>
+            <a id="xUser" href="#" class="link-btn" target="_blank">
+                <i data-feather="twitter"></i> Red X (Twitter)
+            </a>
+            <a id="linkedinUser" href="#" class="link-btn" target="_blank">
+                <i data-feather="linkedin"></i> LinkedIn Profesional
+            </a>
+        </div>
+
+        <!-- Footer Dinámico -->
+        <div class="bottom">
+            <i data-feather="terminal" style="width: 16px; height: 16px;"></i>
+            <span id="author">Cargando firma...</span>
+        </div>
+    </div>
+
+    <script>
+        // Inicializa los iconos de Feather de forma automática
+        feather.replace()
+    </script>
+    <script type="text/javascript" src="requests.js"></script>
+</body>  
+</html>
